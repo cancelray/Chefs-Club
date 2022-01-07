@@ -1,0 +1,255 @@
+@import "__mixins.scss";
+@import "__consts.scss";
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 244px;
+    align-items: center;
+    justify-content: center;
+    .container {
+        justify-content: space-between;
+        h3 {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 14px;
+            line-height: 20px;
+            color: $menu-main-color;
+        }
+        .contacts {
+            @include flex(column);
+            height: 114px;
+            .contact-tel {
+                color: $heads-color;
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .copyright, .info-desc {
+                color: $menu-main-color;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 10px;
+                max-width: 180px;
+                width: 100%;
+            }
+            .contact-socials {
+                display: none;
+            }
+        }
+        .collums-wrapper {
+            @include flex($justify: space-between);
+            max-width: 933px;
+            width: 100%;
+            .about-wrapper {
+                @include flex(column);
+                height: 124px;
+                max-width: 330px;
+                width: 100%;
+                .about {
+                    @include flex(column);
+                    height: 90px;
+                    flex-wrap: wrap;
+                    a {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .clients-wrapper {
+                height: 154px;
+                max-width: 192px;
+                width: 100%;
+                .for-clients {
+                    @include flex(column, space-between, left);
+                    height: 100px;
+                    a {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .socials {
+                @include flex(column);
+                max-width: 270px;
+                width: 100%;
+                .subscribe {
+                    .subscribe-desc {
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: $menu-main-color;
+                        margin-bottom: 20px;
+                    }
+                    .input-wrapper {
+                        margin-bottom: 20px;
+                        @include flex($align: center);
+                        width: 100%;
+                        height: 44px;
+                        border: 1px solid #CDCFD5;
+                        border-radius: 64px;
+                        .subscribe-input {
+                            width: 225px;
+                            padding-left: 12px;
+                        }
+                    }
+                }
+                .socials {
+                    @include flex($justify: space-between);
+                    width: 150px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        height: 310px;
+        .container {
+            .contacts {
+                max-width: 173px;
+                width: 100%;
+                margin-right: 40px;
+                .contact-socials {
+                    @include flex($justify: space-between);
+                    width: 150px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+            .collums-wrapper {
+                flex-direction: column;
+                justify-content: flex-start;
+                .about-wrapper {
+                    @include flex(column);
+                    height: 64px;
+                    max-width: 510px;
+                    width: 100%;
+                    margin-bottom: 30px;
+                    .about {
+                        @include flex($justify: space-between);
+                        width: 100%;
+                        flex-wrap: nowrap;
+                        a {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .clients-wrapper {
+                    height: 64px;
+                    max-width: 484px;
+                    width: 100%;
+                    margin-bottom: 30px;
+                    .for-clients {
+                        flex-direction: row;
+                        height: 20px;
+                        a {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .socials {
+                    flex-direction: row;
+                    max-width: 515px;
+                    width: 100%;
+                    .subscribe {
+                        @include flex($justify: space-between);
+                        .subscribe-desc {
+                            margin-bottom: 0;
+                        }
+                        .input-wrapper {
+                            margin-bottom: 0;
+                            width: 270px;
+                            .subscribe-input {
+                                width: 225px;
+                                padding-left: 12px;
+                            }
+                        }
+                    }
+                    .socials {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        height: 596px;
+        .container {
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0 16px;
+            .contacts {
+                max-width: none;
+                width: 100%;
+                margin-right: 0;
+                .copyright, .info-desc {
+                    max-width: none;
+                }
+                .contact-socials {
+                    display: none;
+                }
+            }
+            .collums-wrapper {
+                .about-wrapper {
+                    height: 84px;
+                    max-width: none;
+                    width: 100%;
+                    .about {
+                        @include flex($justify: space-between);
+                        max-width: 260px;
+                        width: 100%;
+                        flex-wrap: wrap;
+                        a {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .clients-wrapper {
+                    height: 84px;
+                    max-width: none;
+                    width: 100%;
+                    .for-clients {
+                        @include flex($justify: space-between);
+                        max-width: 260px;
+                        width: 100%;
+                        flex-wrap: wrap;
+                        a {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .socials {
+                    flex-direction: column;
+                    max-width: none;
+                    width: 100%;
+                    .subscribe {
+                        flex-direction: column;
+                        .subscribe-desc {
+                            margin-bottom: 10px;
+                        }
+                        .input-wrapper {
+                            margin-bottom: 30px;
+                        }
+                    }
+                    .socials {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+
+}

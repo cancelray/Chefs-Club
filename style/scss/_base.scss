@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Circe';
+	src: url('../../fonts/Circe/circe.eot');
+	src: url('../../fonts/Circe/circe.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/Circe/circe.woff2') format('woff2'),
+		url('../../fonts/Circe/circe.woff') format('woff'),
+		url('../../fonts/Circe/circe.ttf') format('truetype'), 
+		url('../../fonts/Circe/circe.svg#circe') format('svg');
+}
+@font-face {
+	font-family: 'Circe Bold';
+	src: url('../../fonts/Circe/circe_bold.eot'); 
+	src: url('../../fonts/Circe/circe_bold.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/Circe/circe_bold.woff2') format('woff2'),
+		url('../../fonts/Circe/circe_bold.woff') format('woff'),
+		url('../../fonts/Circe/circe_bold.ttf') format('truetype'),
+		url('../../fonts/Circe/circe_bold.svg#circe_bold') format('svg');
+}
+@font-face {
+  font-family: 'TT Norms';
+  src: url('../../fonts/TTNorms/TTNorms-Thin.eot');
+  src: local('../../fonts/TTNorms/TT Norms Thin'), local('TTNorms-Thin'),
+      url('../../fonts/TTNorms/TTNorms-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/TTNorms/TTNorms-Thin.woff2') format('woff2'),
+      url('../../fonts/TTNorms/TTNorms-Thin.woff') format('woff'),
+      url('../../fonts/TTNorms/TTNorms-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TT Norms Bold';
+  src: url('../../fonts/TTNorms/TTNorms-Bold.eot');
+  src: local('../../fonts/TTNorms/TT Norms Bold'), local('TTNorms-Bold'),
+      url('../../fonts/TTNorms/TTNorms-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/TTNorms/TTNorms-Bold.woff2') format('woff2'),
+      url('../../fonts/TTNorms/TTNorms-Bold.woff') format('woff'),
+      url('../../fonts/TTNorms/TTNorms-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Circe', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.page-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}

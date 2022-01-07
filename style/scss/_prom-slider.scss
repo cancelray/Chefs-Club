@@ -1,0 +1,197 @@
+@import "__consts.scss";
+@import "__mixins.scss";
+
+.prom-slider {
+    margin-top: 30px;
+    .container {
+        .slider-wrapper {
+            @include flex($align: center);
+            max-width: 1218px;
+            width: 100%;
+            max-height: 500px;
+            height: 100%;
+            background: url("../../img/landing-pg/prom-slider/desc/desc-bg.png") center/auto no-repeat;
+            .prom-slider-left {
+                margin-right: auto;
+                width: 48px;
+                height: 48px;
+                background: url("../../img/landing-pg/prom-slider/prom-slider-left.svg") center/auto no-repeat;
+                flex-shrink: 0;
+            }
+            .slider {
+                max-width: 1115px;
+                width: 100%;
+                .slider-content {
+                    max-width: 530px;
+                    width: 100%;
+                    height: 500px;
+                    padding: 40px 50px;
+                    @include flex(column);
+                    .promotion {
+                        margin-bottom: 30px;
+                    }
+                    .slider-header {
+                        //font-family: 'TT Norms', sans-serif;
+                        font-weight: 700;
+                        font-size: 48px;
+                        line-height: 57px;
+                        color: #FFFFFF;
+                        margin-bottom: 20px;
+                    }
+                    .slider-info {
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #F0F1EE;
+                        margin-bottom: 30px;
+                    }
+                    .slider-buttons {
+                        @include flex($justify: space-between);
+                        margin-bottom: 40px;
+                    }
+                    .slider-counts {
+                        @include flex($justify: space-between, $align: center);
+                        max-width: 105px;
+                        width: 100%;
+                        .count {
+                            width: 10px;
+                            height: 10px;
+                            background: #FFFFFF;
+                            opacity: 0.5;
+                            border-radius: 50px;
+                        }
+                        .current {
+                            opacity: 1;
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+            .prom-slider-right {
+                margin-left: auto;
+                width: 48px;
+                height: 48px;
+                background: url("../../img/landing-pg/prom-slider/prom-slider-right.svg") center/auto no-repeat;
+                flex-shrink: 0;
+            }
+        }
+        .mobile-slider-navigation {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .prom-slider {
+        .container {
+            .slider-wrapper {
+                max-width: 766px;
+                width: 100%;
+                background: url("../../img/landing-pg/prom-slider/laptop/laptop-bg.png") center/auto no-repeat;
+                .slider {
+                    max-width: 728px;
+                    .slider-content {
+                        max-width: 420px;
+                        width: 100%;
+                        height: 500px;
+                        padding: 40px 7px;
+                        .slider-header {
+                            //font-family: 'TT Norms', sans-serif;
+                            font-size: 40px;
+                            line-height: 47px;
+                        }
+                    }
+                }
+            }
+        }
+        .mobile-slider-navigation {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .prom-slider {
+        .container {
+            justify-content: center;
+            .slider-wrapper {
+                max-width: 300px;
+                width: 100%;
+                background: url("../../img/landing-pg/prom-slider/mobile/mobile-bg.png") top/contain no-repeat;
+                flex-direction: column;
+                .prom-slider-left {
+                    display: none;
+                }
+                .slider {
+                    max-width: 300px;
+                    margin-bottom: 20px;
+                    .slider-content {
+                        max-width: 250px;
+                        width: 100%;
+                        height: 400px;
+                        padding: 20px;
+                        .promotion {
+                            margin-bottom: 10px;
+                        }
+                        .slider-header {
+                            //font-family: 'TT Norms', sans-serif;
+                            font-size: 30px;
+                            line-height: 35px;
+                            margin-bottom: 10px;
+                        }
+                        .slider-info {
+                            font-size: 16px;
+                            line-height: 22px;
+                            margin-bottom: 0;
+                        }
+                        .slider-buttons {
+                            display: none;
+                        }
+                        .slider-counts {
+                            display: none;
+                        }
+                    }
+                }
+                .prom-slider-right {
+                    display: none;
+                }
+                .mobile-slider-navigation {
+                    @include flex($justify: space-between, $align: center);
+                    width: 100%;
+                    .mobile-slider-left {
+                        margin-right: auto;
+                        width: 40px;
+                        height: 40px;
+                        background: url("../../img/landing-pg/prom-slider/prom-slider-left.svg") center/auto no-repeat;
+                        flex-shrink: 0;
+                    }
+                    .mobile-slider-counts {
+                        @include flex($justify: space-between, $align: center);
+                        max-width: 105px;
+                        width: 100%;
+                        .mobile-count {
+                            width: 10px;
+                            height: 10px;
+                            background: #DDDEDB;
+                            opacity: 0.5;
+                            border-radius: 50px;
+                        }
+                        .mobile-current {
+                            opacity: 1;
+                            background: $hover-color;
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                    .mobile-slider-right {
+                        margin-left: auto;
+                        width: 40px;
+                        height: 40px;
+                        background: url("../../img/landing-pg/prom-slider/prom-slider-right.svg") center/auto no-repeat;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+}

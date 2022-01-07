@@ -1,0 +1,487 @@
+@import "__consts.scss";
+@import "__mixins.scss";
+
+.menu-section {
+    margin-top: 49px;
+    padding: 85px 0;
+    background-color: $menu-section-bg;
+    .container {
+        flex-direction: column;
+        .menu-section-head {
+            @include flex($justify: center, $align: center);
+            margin-bottom: 20px;
+            .menu-slide-left {
+                margin-right: auto;
+                width: 48px;
+                height: 48px;
+                background: url("../../img/landing-pg/menu-section/menu-slider-left.svg") center/auto no-repeat;
+                flex-shrink: 0;
+            }
+            .head-text {
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 57px;
+                color: $heads-color;
+            }
+            .menu-slide-right {
+                margin-left: auto;
+                width: 48px;
+                height: 48px;
+                background: url("../../img/landing-pg/menu-section/menu-slider-right.svg") center/auto no-repeat;
+                flex-shrink: 0;
+            }
+        }
+        .menu-desc {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .type-menu-choose {
+            @include flex($justify: space-between);
+            margin: 0 auto;
+            max-width: 950px;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        .menu-slider-wrapper {
+            @include flex($justify: center);
+            position: relative;
+            width: 100%;
+            padding: 0 15px;
+            .nav-arrows-wrapper {
+                top: 200px;
+                position: absolute;
+                width: 100%;
+                max-width: 1218px;
+                .slider-left {
+                    position: absolute;
+                    left: 0;
+                    width: 48px;
+                    height: 48px;
+                    background: url("../../img/landing-pg/menu-section/menu-slider-left.svg") center/auto no-repeat;
+                }
+                .slider-right {
+                    position: absolute;
+                    right: 0;
+                    width: 48px;
+                    height: 48px;
+                    background: url("../../img/landing-pg/menu-section/menu-slider-right.svg") center/auto no-repeat;
+                }
+            }
+            .item-wrapper {
+                @include flex($justify: space-between);
+                max-width: 1170px;
+                width: 100%;
+                .menu-slider-item {
+                    @include flex(column);
+                    max-width: 370px;
+                    width: 100%;
+                    background: #FFFFFF;
+                    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
+                    border-radius: 8px;
+                    .slider-img {
+                        width: 100%;
+                        height: 220px;
+                        padding: 10px;
+                        .img-desc {
+                            max-width: 53px;
+                            font-weight: bold;
+                            background: linear-gradient(0deg, #A1A75C, #A1A75C), #65BF4F;
+                            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.03);
+                            border-radius: 4px;
+                            color: white;
+                            margin-left: auto;
+                            padding: 4px 12px;
+                        }
+                    }
+                    .first-slide {
+                        background: url(../../img/landing-pg/menu-section/sliders-img/img-0.png) center/cover no-repeat;
+                    }
+                    .second-slide {
+                        background: url(../../img/landing-pg/menu-section/sliders-img/img-1.png) center/cover no-repeat;
+                    }
+                    .third-slide {
+                        background: url(../../img/landing-pg/menu-section/sliders-img/img-2.png) center/cover no-repeat;
+                    }
+                    .slider-content {
+                        padding: 15px 20px;
+                        .tags-wrapper {
+                            @include flex($justify: space-between);
+                            max-width: 251px;
+                            width: 100%;
+                            margin-bottom: 18px;
+                            .menu-tag {
+                                padding: 3px 8px;
+                                background: #F0F1EE;
+                                box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.03);
+                                border-radius: 4px;
+                                font-size: 12px;
+                                line-height: 18px;
+                                color: $content-main-color;
+                            }
+                        }
+                        .dish-name {
+                            font-weight: bold;
+                            font-size: 18px;
+                            line-height: 24px;
+                            color: $heads-color;
+                            margin-bottom: 15px;
+                        }
+                        .cooking-info {
+                            width: 100%;
+                            @include flex($justify: space-between);
+                            padding-bottom: 15px;
+                            border-bottom: 1px solid #DDDEDB;
+                            margin-bottom: 30px;
+                            .cooking-dropdown {
+                                @include flex($justify: space-between, $align: center);
+                                width: 139px;
+                                .chefs-mark {
+                                    background: url(../../img/landing-pg/menu-section/chefs-icon.svg) center/cover no-repeat;
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                                .dropdown-text {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    color: $menu-main-color;
+                                }
+                                .drop-arrow {
+                                    background: url(../../img/landing-pg/menu-section/Vector.png) center/cover no-repeat;
+                                    width: 8px;
+                                    height: 4px;
+                                }
+                            }
+                            .cook-for-days {
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: $menu-main-color;
+                                .number-of-days {
+                                    font-weight: bold;
+                                    color: $heads-color;
+                                }
+                            }
+                        }
+                        .dish-info {
+                            width: 100%;
+                            @include flex($justify: space-between);
+                            .dish-weight {
+                                @include flex($justify: space-between, $align: center);
+                                width: 65px;
+                                .dish-img {
+                                    background: url(../../img/landing-pg/menu-section/dish-img.png) center/cover no-repeat;
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                                .weight {
+                                    color: $menu-main-color;
+                                }
+                            }
+                            .time-for-cooking {
+                                @include flex($justify: space-between, $align: center);
+                                width: 78px;
+                                .watch-img {
+                                    background: url(../../img/landing-pg/menu-section/time.png) center/cover no-repeat;
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                                .time {
+                                    color: $menu-main-color;
+                                }
+                            }
+                            .switch {
+                                width: 140px;
+                                height: 44px;
+                                @include flex($align: center);
+                                background: #F0F1EE;
+                                border-radius: 26px;
+                            }
+                            .switch:hover {
+                                cursor: pointer;
+                            }
+                            .choose-dish {
+                                background: #F0F1EE;
+                                .choose-slide {
+                                    background: #FFFFFF;
+                                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                                    border-radius: 26px;
+                                    width: 34px;
+                                    height: 34px;
+                                    margin-left: 5px;
+                                }
+                                .choose-text {
+                                    margin-left: 14px;
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    color: $menu-main-color;
+                                }
+                            }
+                            .chosen-dish {
+                                background: linear-gradient(0deg, #A1A75C, #A1A75C), #65BF4F;
+                                justify-content: right;
+                                .chosen-slide {
+                                    background: 
+                                        url(../../img/landing-pg/menu-section/check.png) center/16px 16px no-repeat,
+                                        #747840;
+                                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                                    border-radius: 26px;
+                                    width: 34px;
+                                    height: 34px;
+                                    margin-right: 5px;
+                                }
+                                .chosen-text {
+                                    margin-right: 14px;
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    color: white;
+                                }
+                            }
+                        }
+                        .cooking-info-mobile {
+                            display: none;
+                        }
+                        .dish-info-mobile {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .menu-section {
+        padding: 80px 0;
+        .container {
+            max-width: 788px;
+            .menu-section-head {
+                margin-bottom: 10px;
+                .head-text {
+                    font-size: 40px;
+                    line-height: 47px;
+                }
+            }
+            .menu-desc {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .type-menu-choose {
+                margin-bottom: 30px;    
+            }
+            .menu-slider-wrapper {
+                .nav-arrows-wrapper {
+                    top: 200px;
+                    max-width: 758px;
+                }
+                .item-wrapper {
+                    max-width: 750px;
+                    .menu-slider-item {
+                        max-width: 354px;
+                        }
+                        .slider-content {
+                            .tags-wrapper {
+                                margin-bottom: 15px;
+                            }
+                            .dish-name {
+                                font-weight: bold;
+                                font-size: 18px;
+                                line-height: 24px;
+                                color: $heads-color;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                .menu-slider-item:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}    
+
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 60px 0;
+        .container {
+            .menu-section-head {
+                margin-bottom: 15px;
+                padding: 0 10px;
+                .menu-slide-left {
+                    width: 32px;
+                    height: 32px;
+                }
+                .head-text {
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+                .menu-slide-right {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+            .menu-desc {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .type-menu-choose {
+                width: 100%;
+                overflow: hidden;
+                padding: 0 15px;
+            }
+            .menu-slider-wrapper {
+                justify-content: center;
+                .nav-arrows-wrapper {
+                    top: 180px;
+                    max-width: 310px;
+                    width: 100%;
+                }
+                .item-wrapper {
+                    max-width: 750px;
+                    justify-content: center;
+                    .display-none {
+                        display: none;
+                    }
+                    .menu-slider-item {
+                        max-width: 290px;
+                        .slider-content {
+                            .tags-wrapper {
+                                margin-bottom: 18px;
+                                .menu-tag {
+                                    padding: 2px;
+                                }
+                            }
+                            .dish-name {
+                                font-weight: bold;
+                                font-size: 18px;
+                                line-height: 24px;
+                                color: $heads-color;
+                                margin-bottom: 15px;
+                            }
+                            .cooking-info {
+                                display: none;
+                            }
+                            .dish-info {
+                                display: none;
+                            }
+                            .cooking-info-mobile {
+                                @include flex($justify: space-between);
+                                padding-bottom: 15px;
+                                border-bottom: 1px solid #DDDEDB;
+                                margin-bottom: 20px;
+                                .dish-weight {
+                                    @include flex($justify: space-between, $align: center);
+                                    width: 48px;
+                                    font-size: 12px;
+                                    .dish-img {
+                                        background: url(../../img/landing-pg/menu-section/mobile/dish-img-mob.png) center/cover no-repeat;
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+                                    .weight {
+                                        color: $menu-main-color;
+                                    }
+                                }
+                                .time-for-cooking {
+                                    @include flex($justify: space-between, $align: center);
+                                    width: 58px;
+                                    font-size: 12px;
+                                    .watch-img {
+                                        background: url(../../img/landing-pg/menu-section/mobile/time-img-mob.png) center/cover no-repeat;
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+                                    .time {
+                                        color: $menu-main-color;
+                                    }
+                                }
+                                .cooking-dropdown {
+                                    @include flex($justify: space-between, $align: center);
+                                    width: 121px;
+                                    .chefs-mark {
+                                        background: url(../../img/landing-pg/menu-section/chefs-icon.svg) center/cover no-repeat;
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+                                    .dropdown-text {
+                                        font-size: 12px;
+                                        line-height: 18px;
+                                        color: $menu-main-color;
+                                    }
+                                    .drop-arrow {
+                                        background: url(../../img/landing-pg/menu-section/Vector.png) center/cover no-repeat;
+                                        width: 8px;
+                                        height: 4px;
+                                    }
+                                }
+                            }
+                            .dish-info-mobile {
+                                @include flex($justify: space-between);
+                                .cook-for-days {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    color: $menu-main-color;
+                                    width: 75px;
+                                    .number-of-days {
+                                        font-weight: bold;
+                                        color: $heads-color;
+                                    }
+                                }
+                                .switch {
+                                    width: 140px;
+                                    height: 44px;
+                                    @include flex($align: center);
+                                    background: #F0F1EE;
+                                    border-radius: 26px;
+                                }
+                                .switch:hover {
+                                    cursor: pointer;
+                                }
+                                .choose-dish {
+                                    background: #F0F1EE;
+                                    .choose-slide {
+                                        background: #FFFFFF;
+                                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                                        border-radius: 26px;
+                                        width: 34px;
+                                        height: 34px;
+                                        margin-left: 5px;
+                                    }
+                                    .choose-text {
+                                        margin-left: 14px;
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        color: $menu-main-color;
+                                    }
+                                }
+                                .chosen-dish {
+                                    background: linear-gradient(0deg, #A1A75C, #A1A75C), #65BF4F;
+                                    justify-content: right;
+                                    .chosen-slide {
+                                        background: 
+                                            url(../../img/landing-pg/menu-section/check.png) center/16px 16px no-repeat,
+                                            #747840;
+                                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                                        border-radius: 26px;
+                                        width: 34px;
+                                        height: 34px;
+                                        margin-right: 5px;
+                                    }
+                                    .chosen-text {
+                                        margin-right: 14px;
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  

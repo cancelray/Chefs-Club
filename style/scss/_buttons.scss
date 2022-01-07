@@ -1,0 +1,113 @@
+@import "__consts.scss";
+
+.login-header {
+    width: 130px;
+    height: 40px;
+    color: $heads-color;
+    background: #FAFAFA;
+    border-radius: 134px;
+    display: flex;
+    padding: 8px 25px;
+    span {
+        margin-left: 11px;
+        padding: 1px 0;
+    }
+}
+
+.promotion-btn {
+    width: 74px;
+    height: 30px;
+    background: #FF794F;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.slider-btn {
+    width: 200px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.1));
+    border-radius: 134px;
+}
+.buy {
+    padding: 18px 72px;
+}
+.menu {
+    padding: 18px 75px;
+}
+.slider-btn:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: $heads-color
+}
+
+.choose-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 174px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #CECFCD;
+    border-radius: 74px;
+    color: $hover-color;
+}
+.choose-menu-btn:hover {
+    cursor: pointer;
+}
+.chosen-btn {
+    background: linear-gradient(0deg, #A1A75C, #A1A75C), #65BF4F;
+    color: white;
+}
+
+.subscribe-button {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(0deg, #A1A75C, #A1A75C), #65BF4F;
+    border-radius: 64px;
+    img {
+        width: 16px;
+        height: 13px;
+        margin-left: 11px;
+    }
+}
+
+@media (max-width: 992px)  {
+    .choose-menu-btn {
+        width: 130px;
+    }   
+
+    .subscribe-button {
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .login-header {
+        display: none;
+    }
+    
+    .promotion-btn {
+        width: 60px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    .choose-menu-btn {
+        width: 108px;
+        height: 46px;
+        flex-shrink: 0;
+    }
+}
